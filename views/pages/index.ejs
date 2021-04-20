@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+        
+          <%results.forEach(data=>{%>
+            <div>
+           <p><%=data.name%></p>
+           <p><%=data.house%></p>
+           <p><%=data.patronus%></p>
+           <p><%=data.alive%></p>
+
+
+           <form action="/addFav" method="POST">
+          <input type="hidden" name="name" value="<%=data.name%>">
+          <input type="hidden" name="house" value="<%=data.house%>">
+          <input type="hidden" name="patronus" value="<%=data.patronus%>">
+          <input type="hidden" name="alive" value="<%=data.alive%>">
+          <button type="submit">Add To Favorit</button>
+
+        </form>
+    </div>
+
+
+            <%}) %>
+
+        </section>
+        
+    </main>
+
+
+</body>
+</html>

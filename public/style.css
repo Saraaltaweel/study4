@@ -1,0 +1,17 @@
+body {
+    background-color: teal;
+}
+
+section {
+    display: flex;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    margin-left: 10%;
+
+}
+div{
+   background-color: aquamarine;
+   width: 300px;
+   margin: 20px;
+   text-align: center;
+}
